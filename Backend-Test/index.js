@@ -14,11 +14,13 @@ const corsOption = {
 
 app.use(express.json());
 app.use(cors(corsOption));
+
+
 app.use("/api/v1", authRouter);
 app.use("/api/v2", productRouter);
 
 app.get("/", (req, res) => {
-    res.send("FINAL BACKEND");
+    res.send("BACKEND");
 });
 
 // Database Connection
